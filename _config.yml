@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
+title: Communication 
+author: ADM
+logo: https://s.yimg.com/ny/api/res/1.2/yJSXgXR.2vFLg6spo5jqUw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTcyMA--/https://media.zenfs.com/en/business_insider_articles_888/231d9d6b07f98969ddf387f38fa43e4f
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
