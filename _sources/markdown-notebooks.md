@@ -12,11 +12,11 @@ kernelspec:
   name: python3
 ---
 
-# Notebooks with MyST Markdown
+# Communication
 
-Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See [the Notebooks with MyST Markdown documentation](https://jupyterbook.org/file-types/myst-notebooks.html) for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.
+Dawn of a [new era](https://abikesa.github.io/odysseus/chapter1.html) in communication and leadership.
+
+<iframe src="https://abikesa.github.io/odysseus/chapter1.html" width="100%" height="800px"></iframe>
 
 ## An example cell
 
