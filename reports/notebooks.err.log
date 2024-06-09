@@ -15,19 +15,55 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from matplotlib import rcParams, cycler
+import networkx as nx
 import matplotlib.pyplot as plt
-import numpy as np
-plt.ion()
+
+G = nx.DiGraph()
+G.add_node("Audio/Vision", pos=(-2500, 700))
+G.add_node("Text/Language", pos=(-4200, 0))
+G.add_node("Frailty", pos=(-1000, 0))
+G.add_node("Haptic/Robot", pos=(-2500, -700))
+G.add_node("Real-Time", pos=(1500, 0))
+G.add_node("Outcome", pos=(4000, 0))
+
+G.add_edges_from([("Audio/Vision", "Frailty")])
+G.add_edges_from([("Text/Language", "Frailty")])
+G.add_edges_from([("Haptic/Robot", "Frailty")])
+G.add_edges_from([("Frailty", "Real-Time")])
+G.add_edges_from([("Real-Time", "Outcome")])
+
+pos = nx.get_node_attributes(G, 'pos')
+labels = {"Frailty": "Frailty\n(Phenotype)",
+          "Audio/Vision": "Audio/Vision",
+          "Text/Language": "Text/Language",
+          "Haptic/Robot": "Haptic/Robot",
+          "Real-Time": "Real-Time",
+          "Outcome": "Outcome\n(Hard Endpoints)"}  # Added label for "NDI" node in the labels dictionary
+
+# Update color for the "Scenarios" node
+node_colors = ["lightblue","lightblue", "lavender", "lightblue", "lightblue", "lightblue"]
+# node_colors = ["lightblue","lavender", "lavender", "lightgreen", "lightpink", "lightpink"]
+# Suppress the deprecation warning
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
+plt.figure(figsize=(10, 8))
+nx.draw(G, pos, with_labels=False, node_size=20000, node_color=node_colors, linewidths=2, edge_color='black', style='solid')
+nx.draw_networkx_labels(G, pos, labels, font_size=14) # , font_weight='bold'
+nx.draw_networkx_edges(G, pos, edge_color='black', style='solid', width=2)
+plt.xlim(-5000, 5000)
+plt.ylim(-1000, 1000)
+plt.axis("off")
+plt.show()
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 Cell [0;32mIn[1], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m rcParams, cycler
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
 [1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      4[0m G [38;5;241m=[39m nx[38;5;241m.[39mDiGraph()
 
-[0;31mModuleNotFoundError[0m: No module named 'matplotlib'
+[0;31mModuleNotFoundError[0m: No module named 'networkx'
 

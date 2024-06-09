@@ -2,7 +2,7 @@
 
 - Dionysus (individual: 1, 2, 3)
 - [Sing](https://en.wikisource.org/wiki/An_Attempt_at_Self-Criticism#3), [O Muse](https://www.gutenberg.org/files/2199/2199-h/2199-h.htm#chap01) ([4](https://github.com/abikesa/lor))
-- Apollo (group: 5, 6)
+- Apollo ([group](https://www.youtube.com/watch?v=l50EVw7C7ks): 5, 6)
 
                       1. Voir
                              \
