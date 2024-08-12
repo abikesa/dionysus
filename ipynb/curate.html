@@ -430,7 +430,7 @@ document.write(`
 <section id="mu-base-case-hunter-gatherer">
 <h2><span class="math notranslate nohighlight">\(\mu\)</span>, Base-case: Hunter-gatherer<a class="headerlink" href="#mu-base-case-hunter-gatherer" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(t)\)</span> Experiences</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(t)\)</span> Sensory: Life</p></li>
 </ul>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
@@ -505,16 +505,31 @@ document.write(`
 </details>
 </div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(S(t)\)</span> Alive <span id="id2"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id4" title="Friedrich Nietzsche. Human, All Too Human: A Book for Free Spirits, Part II. Project Gutenberg, 1886. Aphorism 140, &quot;Dancing in Chains&quot; discusses the self-imposed constraints in Greek artistry and how these constraints are creatively transformed into perceived ease. URL: https://www.gutenberg.org/cache/epub/37841/pg37841-images.html.">1</a></sup></span> <span id="id3"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id5" title="John Updike. Rabbit, Run. Knopf, New York, 1960. &quot;Human was the music, natural the static&quot; appears in this novel, reflecting the theme of human experience contrasted with the chaotic nature of life.">33</a></sup></span></p></li>
-<li><p><span class="math notranslate nohighlight">\(h(t)\)</span> Nihlistic</p></li>
+<li><p><span class="math notranslate nohighlight">\(S(t)\)</span> Temperament: Curated <span id="id2"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id4" title="Friedrich Nietzsche. Human, All Too Human: A Book for Free Spirits, Part II. Project Gutenberg, 1886. Aphorism 140, &quot;Dancing in Chains&quot; discusses the self-imposed constraints in Greek artistry and how these constraints are creatively transformed into perceived ease. URL: https://www.gutenberg.org/cache/epub/37841/pg37841-images.html.">1</a></sup></span> <span id="id3"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id5" title="John Updike. Rabbit, Run. Knopf, New York, 1960. &quot;Human was the music, natural the static&quot; appears in this novel, reflecting the theme of human experience contrasted with the chaotic nature of life.">33</a></sup></span></p></li>
+<li><p><span class="math notranslate nohighlight">\(h(t)\)</span> Rhythm: Pulse</p></li>
 </ul>
+<Details>
+   <Summary></Summary>
+<ul class="simple">
+<li><p>No pulse: dead or nihilistic</p></li>
+<li><p>Pulse: alive &amp; thriving</p></li>
+</ul>
+</Details>
 </section>
 <section id="sigma-varcov-matrix-evolution">
 <h2><span class="math notranslate nohighlight">\(\sigma\)</span>, Varcov-matrix: Evolution<a class="headerlink" href="#sigma-varcov-matrix-evolution" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((X'X)^T \cdot X'Y\)</span> Stage</p></li>
+<li><p><span class="math notranslate nohighlight">\((X'X)^T \cdot X'Y\)</span> Mode: Degree</p></li>
 </ul>
-<div class="cell tag_hide-input tag_hide-output docutils container">
+<Details>
+   <Summary></Summary>
+<ul class="simple">
+<li><p>Pentatonic excludes <code class="docutils literal notranslate"><span class="pre">ii7♭5</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">VI</span></code></p></li>
+<li><p>Diatonic &amp; chromatic are tidy references</p></li>
+<li><p>Ethnic variants are best understood as deviating from diatonic or chromatic scale</p></li>
+<li><p>They may be viewed as “alterations” (e.g., mixolydian ♭13♭9♯9 ~ Flamenco phrygian)</p></li>
+</ul>
+</Details><div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -526,10 +541,11 @@ document.write(`
 
 <span class="c1"># Clock settings; f(t) random disturbances making &quot;paradise lost&quot;</span>
 <span class="n">clock_face_radius</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">number_of_ticks</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">number_of_ticks</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;Hunter-gather&quot;</span><span class="p">,</span> <span class="s2">&quot;Peasant&quot;</span><span class="p">,</span> <span class="s2">&quot;Farmer&quot;</span><span class="p">,</span> <span class="s2">&quot;Manufacturer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Energy&quot;</span><span class="p">,</span> <span class="s2">&quot;Transport&quot;</span>
+    <span class="s2">&quot;Root (i)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hunter-gather (ii7♭5)&quot;</span><span class="p">,</span> <span class="s2">&quot;Peasant (III)&quot;</span><span class="p">,</span> <span class="s2">&quot;Farmer (iv)&quot;</span><span class="p">,</span> <span class="s2">&quot;Manufacturer (V7♭9♯9♭13)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Energy (VI)&quot;</span><span class="p">,</span> <span class="s2">&quot;Transport (VII)&quot;</span>
 <span class="p">]</span>
 
 <span class="c1"># Calculate the angles for each tick (in radians)</span>
@@ -588,7 +604,7 @@ document.write(`
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../_images/2d898b21ef85edb773b1a18b67661b167538705887dd1c6efb555d03c97d84ee.png" src="../_images/2d898b21ef85edb773b1a18b67661b167538705887dd1c6efb555d03c97d84ee.png" />
+<img alt="../_images/f9f93414aa23c6f1689c770d9e78c8e3ea906723707c9d0b81275d38d2d7b728.png" src="../_images/f9f93414aa23c6f1689c770d9e78c8e3ea906723707c9d0b81275d38d2d7b728.png" />
 </div>
 </details>
 </div>
@@ -596,7 +612,7 @@ document.write(`
 <section id="hierarchical-needs">
 <h2><span class="math notranslate nohighlight">\(\%\)</span>, Hierarchical: Needs<a class="headerlink" href="#hierarchical-needs" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\beta\)</span> Priorities</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> Chords: Progression</p></li>
 </ul>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
@@ -677,7 +693,7 @@ document.write(`
 </details>
 </div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(SV'\)</span> Utility 🩸</p></li>
+<li><p><span class="math notranslate nohighlight">\(SV'\)</span> Blood 🩸: Rituals</p></li>
 </ul>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
