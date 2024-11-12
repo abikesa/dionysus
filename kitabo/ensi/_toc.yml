@@ -5,50 +5,50 @@ chapters:
   # Sing O Muse!
   - file: act1/part1
     sections:
-      - title: Mortality
+      - title: Lyre
         file: act1/chapter1
-      - title: ESRD
+      - title: Roulette
         file: act1/chapter2
-      - title: Frailty
+      - title: Spear
         file: act1/chapter3
         
   # Sing O Muse!
   - file: act2/part2
     sections:
-      - title: Hospitalization
+      - title: Paradise
         file: act2/chapter1
-      - title: Length of Stay
+      - title: Earth
         file: act2/chapter2
-      - title: Outcomes
+      - title: Hell
         file: act2/chapter3
 
   # Apollo
   - file: act3/part3
     sections:
-      - title: WebApp
+      - title: Strategy
         file: act3/act1
         sections:
-          - title: Browser
+          - title: Biology
             file: act3/part1/part1_1
-          - title: User
+          - title: Sociology
             file: act3/part1/part1_2
-          - title: Annotation
+          - title: Psychology
             file: act3/part1/part1_3
-      - title: Deployment
+      - title: Equilibria
         file: act3/act2
         sections:
-          - title: GitHub
+          - title: Cooperative
             file: act3/part2/part2_1
-          - title: Collaborative
+          - title: Iterative
             file: act3/part2/part2_2
-          - title: Open-Source
+          - title: Adversarial
             file: act3/part2/part2_3
-      - title: Iteration
+      - title: Payoff
         file: act3/act3
         sections:
-          - title: Latest Research
+          - title: Forward Propagation
             file: act3/part3/part3_1
-          - title: Bayesian Updates
+          - title: Back Propagation
             file: act3/part3/part3_2
-          - title: Missingness and A Priori
-            file: act3/part3/part3_3
+
+  - file: act3/part3/part3_3
