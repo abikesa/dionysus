@@ -1,4 +1,4 @@
-mkdir -p _build/html/pdfs _build/html/figures _build/html/media _build/html/data _ build/html/testbin
+mkdir -p _build/html/pdfs _build/html/figures _build/html/media _build/html/data _build/html/testbin
 cp -r figures/* _build/html/figures/
 cp -r pdfs/* _build/html/pdfs/
 cp -r media/* _build/html/media/
